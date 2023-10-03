@@ -51,13 +51,13 @@ objects:
         livenessProbe:
           httpGet:
             path: /livez
-            port: ${{ "{{" }}WEB_PORT{{ "}}" }}
+            port: {% raw %}${{WEB_PORT}}{% endraw %}
           initialDelaySeconds: 3
           periodSeconds: 3
         readinessProbe:
           httpGet:
             path: /readyz
-            port: ${{ "{{" }}WEB_PORT{{ "}}" }}
+            port: {% raw %}${{WEB_PORT}}{% endraw %}
 
 parameters:
 - name: IMAGE_TAG
@@ -77,7 +77,7 @@ parameters:
   value: "1"
 - name: APP_NAME
   required: true
-  value: {{cookiecutter.project_name | replace("_", "-")}}
+  value: ${{values.project_name | replace("_", "-")}}
 - name: WEB_PORT
   description: Port this is running on
   value: "8000"

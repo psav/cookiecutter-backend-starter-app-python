@@ -1,4 +1,4 @@
-# ${{cookiecutter.project_name}}
+# ${{values.project_name}}
 
 The purpose of this project is to provide a fully functional implementation of simple applications that is fully
 integrated with the console.redhat.com platform, to serve as an example for new teams onboarding into the platform
