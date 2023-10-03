@@ -1,7 +1,7 @@
 import subprocess
 from datetime import datetime
 
-git_init = "{{cookiecutter.initialize_git}}"
+git_init = "${{values.initialize_git}}"
 git_init = git_init.lower()
 git_init = git_init[0]
 
