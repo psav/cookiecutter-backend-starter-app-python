@@ -14,7 +14,7 @@ objects:
       name: "${APP_NAME}"
     deployments:
     - name: service
-      minReplicas: ${{ "{{" }}REPLICAS_SERVICE{{ "}}" }}
+      minReplicas: {% raw %}${{REPLICAS_SERVICE}}{% endraw %}
       deploymentStrategy:
         privateStrategy: RollingUpdate
       webServices:

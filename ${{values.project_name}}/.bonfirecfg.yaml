@@ -1,6 +1,6 @@
 # Bonfire deployment configuration
 apps:
-- name: {{cookiecutter.project_name | replace("_", "-")}}
+- name: ${{values.project_name | replace("_", "-")}}
   components:
     - name: service
       host: local

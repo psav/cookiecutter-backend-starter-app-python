@@ -1,5 +1,5 @@
 [project]
-name = "{{cookiecutter.project_name | replace("_", "-")}}"
+name = "${{cookiecutter.project_name | replace("_", "-")}}"
 description = "A barebones python app"
 version = "0.0.1"
 dependencies = [
